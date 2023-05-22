@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_product"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+   >
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/productImage_singleProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner6" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@drawable/bg_item_product"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            >
+
+    <!--        <RatingBar-->
+    <!--            android:id="@+id/productRating_singleProduct"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="30dp"-->
+    <!--            android:numStars="5"-->
+    <!--            android:rating="5"-->
+    <!--            android:scaleX=".4"-->
+    <!--            android:scaleY=".4"-->
+    <!--            style="@style/Widget.AppCompat.RatingBar.Indicator"-->
+    <!--            android:transformPivotX="0dp"-->
+    <!--            android:visibility="invisible"-->
+    <!--            android:transformPivotY="15dp" />-->
+
+            <TextView
+                android:id="@+id/productBrandName_singleProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#9B9B9B"
+                android:paddingStart="5dp"
+                android:maxLines="1"
+                android:text="Brand Name"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/productName_singleProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/mainText"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:text="Product Name"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/productPrice_singleProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:maxLines="1"
+                android:text="Product Price"
+                android:paddingStart="5dp"
+                android:textColor="#DB3022"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/discount_singleProduct"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:background="@drawable/discount_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/discountTv_singleProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="-100000%"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:textColor="@color/reds" />
+        </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
